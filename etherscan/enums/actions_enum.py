@@ -60,4 +60,5 @@ class ActionsEnum:
     TOKENNFTTX: str = "tokennfttx"
     TOKENTX: str = "tokentx"
     TXLIST_INTERNAL: str = "txlistinternal"
+    TXLIST_ERC1155: str = "token1155tx"
     TXLIST: str = "txlist"

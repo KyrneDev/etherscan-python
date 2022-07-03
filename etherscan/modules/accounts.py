@@ -109,6 +109,27 @@ class Accounts:
         return url
 
     @staticmethod
+    def get_erc1155_txs_by_address(
+        address: str, startblock: int, endblock: int, sort: str,
+    ) -> str:
+        # NOTE: Returns the last 10k events
+        url = (
+            f"{fields.MODULE}"
+            f"{modules.ACCOUNT}"
+            f"{fields.ACTION}"
+            f"{actions.TXLIST_ERC1155}"
+            f"{fields.ADDRESS}"
+            f"{address}"
+            f"{fields.START_BLOCK}"
+            f"{str(startblock)}"
+            f"{fields.END_BLOCK}"
+            f"{str(endblock)}"
+            f"{fields.SORT}"
+            f"{sort}"
+        )
+        return url
+
+    @staticmethod
     def get_internal_txs_by_address_paginated(
         address: str, page: int, offset: int, startblock: int, endblock: int, sort: str,
     ) -> str:
